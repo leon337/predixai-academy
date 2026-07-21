@@ -1,0 +1,3 @@
+Trigger de deployment após reconexão do GitHub com a Vercel.
+Data: 2026-07-21
+Objetivo: publicar e validar a Sprint 02.
