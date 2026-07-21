@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SiteShell } from "../components/SiteShell";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -6,14 +7,12 @@ export const metadata: Metadata = {
   description: "Plataforma educacional oficial da PredixAI BR.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="pt-BR">
-      <body>{children}</body>
+    <html lang="pt-BR" suppressHydrationWarning>
+      <body>
+        <SiteShell>{children}</SiteShell>
+      </body>
     </html>
   );
 }
