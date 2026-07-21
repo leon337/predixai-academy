@@ -2,56 +2,59 @@
 
 Plataforma educacional oficial da PredixAI BR.
 
-## Estado atual
+## Status
 
-**Fase 0 — Descoberta, estratégia e fundação do produto.**
+**Sprint 01 — Fundação técnica e operacional executada.**
 
-Nenhuma interface final ou aplicação de produção foi implementada.
+A aplicação inicial está publicada em:
 
-## Visão
-
-Construir uma plataforma educacional moderna, acessível e escalável, orientada por:
-
-- UI Design;
-- UX Design;
-- Learning Experience (LX);
-- aprendizagem visual;
-- projetos progressivos;
-- conteúdo multiplataforma;
-- avaliação e recuperação ativa.
+- https://predixai-academy.vercel.app
 
 ## Curso-piloto
 
 **Integração com WhatsApp Business Platform**
 
-- Módulo 1: Fundamentos e Ecossistema.
-- Formatos previstos: plataforma web, livro PDF ilustrado, quiz, glossário, apresentação e materiais complementares.
+- Módulo 1 — Fundamentos e Ecossistema;
+- página web;
+- livro PDF ilustrado;
+- glossário;
+- quiz;
+- checklist;
+- apresentação;
+- materiais complementares.
 
-## Repositórios relacionados
+## Documentação oficial
 
-- `leon337/predixai-academy`: produto educacional e aplicação.
-- `leon337/predixai-knowledge`: biblioteca pública, memória institucional e fontes editoriais.
-- `leon337/predixai-platform`: produtos e sistemas centrais da PredixAI.
+- [Master Blueprint](docs/MASTER_BLUEPRINT.md)
+- [PEDS — PredixAI Education Design System](docs/PEDS.md)
+- [Roadmap](docs/ROADMAP.md)
+- [Fundação do projeto](docs/PROJECT_FOUNDATION.md)
+- [Metodologia de aprendizagem aplicada](docs/PREDIXAI_APPLIED_LEARNING_METHOD.md)
+- [Empresa fictícia](docs/FICTIONAL_COMPANY_CASE_STUDY.md)
+- [Arquitetura da informação](docs/INFORMATION_ARCHITECTURE.md)
+
+## Stack inicial
+
+- Next.js;
+- React;
+- TypeScript;
+- Vercel;
+- Supabase planejado para autenticação, banco, progresso e armazenamento.
 
 ## Governança
 
-- GitHub: fonte técnica e documental do produto.
-- Linear: planejamento, prioridades, dependências e execução.
-- Vercel: previews e publicação.
-- Supabase: opção para autenticação, progresso, banco e armazenamento.
-- Google Drive: documentos editoriais, apresentações e arquivos de trabalho.
+- GitHub: fonte técnica e documental;
+- Linear: planejamento e execução;
+- Vercel: preview e produção;
+- Supabase: dados e autenticação;
+- Google Drive: produção editorial.
 
-## Regra de implementação
+## Serviços
 
-Nenhuma interface final será implementada antes da aprovação de:
+- GitHub: https://github.com/leon337/predixai-academy
+- Linear: https://linear.app/leandro-carlos/project/predixai-academy-77780fe657af
+- Vercel: https://predixai-academy.vercel.app
 
-1. visão do produto;
-2. metodologia educacional;
-3. arquitetura da informação;
-4. escopo do MVP;
-5. Design System;
-6. wireframes;
-7. arquitetura técnica;
-8. critérios de aceitação.
+## Próxima fase
 
-Consulte [`docs/PROJECT_FOUNDATION.md`](docs/PROJECT_FOUNDATION.md).
+Sprint 02 — Layout principal, navegação e catálogo inicial.
