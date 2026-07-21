@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SiteShell } from "../components/SiteShell";
 import "./globals.css";
+import "./sprint3.css";
 
 export const metadata: Metadata = {
   title: "PredixAI Academy",
