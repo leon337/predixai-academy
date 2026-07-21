@@ -1,12 +1,22 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { supabase } from "../lib/supabase";
+
+const FALLBACK_ADMIN = "leonpcsn@gmail.com";
 
 export function SiteShell({ children }: { children: React.ReactNode }) {
   const [dark, setDark] = useState(true);
   const [email, setEmail] = useState<string | null>(null);
+
+  const isAdmin = useMemo(() => {
+    if (!email) return false;
+    const configured = process.env.NEXT_PUBLIC_ADMIN_EMAILS?.split(",")
+      .map((item) => item.trim().toLowerCase())
+      .filter(Boolean) ?? [];
+    return [FALLBACK_ADMIN, ...configured].includes(email.toLowerCase());
+  }, [email]);
 
   useEffect(() => {
     const saved = window.localStorage.getItem("predixai-theme");
@@ -42,6 +52,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             <Link href="/cursos">Cursos</Link>
             <Link href="/biblioteca">Biblioteca</Link>
             <Link href="/perfil">Painel</Link>
+            {isAdmin && <Link href="/admin">Admin</Link>}
           </nav>
           <div className="header-actions">
             <button className="icon-button" type="button" onClick={toggleTheme} aria-label="Alternar tema">
