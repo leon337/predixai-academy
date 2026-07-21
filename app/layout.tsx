@@ -3,6 +3,7 @@ import { SiteShell } from "../components/SiteShell";
 import "./globals.css";
 import "./sprint3.css";
 import "./sprint4.css";
+import "./sprint5.css";
 
 export const metadata: Metadata = {
   title: "PredixAI Academy",
