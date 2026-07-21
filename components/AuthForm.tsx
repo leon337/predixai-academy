@@ -16,9 +16,17 @@ export function AuthForm() {
     setBusy(true);
     setMessage(null);
 
+    const emailRedirectTo = typeof window === "undefined"
+      ? "https://predixai-academy.vercel.app/perfil"
+      : `${window.location.origin}/perfil`;
+
     const result = mode === "login"
       ? await supabase.auth.signInWithPassword({ email, password })
-      : await supabase.auth.signUp({ email, password, options: { data: { full_name: fullName } } });
+      : await supabase.auth.signUp({
+          email,
+          password,
+          options: { data: { full_name: fullName }, emailRedirectTo },
+        });
 
     setBusy(false);
     if (result.error) {
@@ -26,7 +34,12 @@ export function AuthForm() {
       return;
     }
 
-    setMessage(mode === "login" ? "Login realizado com sucesso." : "Cadastro criado. Verifique seu e-mail caso a confirmação esteja ativada.");
+    if (mode === "login") {
+      window.location.href = "/perfil";
+      return;
+    }
+
+    setMessage("Cadastro criado. Abra o e-mail de confirmação para ativar sua conta.");
   }
 
   return (
