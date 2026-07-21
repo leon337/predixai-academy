@@ -40,7 +40,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           <Link className="brand" href="/">PredixAI Academy</Link>
           <nav className="main-nav" aria-label="Navegação principal">
             <Link href="/cursos">Cursos</Link>
-            <Link href="/perfil">Perfil</Link>
+            <Link href="/biblioteca">Biblioteca</Link>
+            <Link href="/perfil">Painel</Link>
           </nav>
           <div className="header-actions">
             <button className="icon-button" type="button" onClick={toggleTheme} aria-label="Alternar tema">
